@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Burger</title>
+</head>
+<body>
+
+    <h1>Build Your Burger</h1>
+
+    <form action="/submit_burger" method="post">
+        <label for="bun">Choose your bun:</label>
+        <select name="bun" id="bun">
+            <option value="sesame">Sesame Seed Bun</option>
+            <option value="brioche">Brioche Bun</option>
+            <option value="whole_grain">Whole Grain Bun</option>
+        </select>
+
+        <label for="patty">Select your patty:</label>
+        <input type="radio" name="patty" value="beef" checked> Beef
+        <input type="radio" name="patty" value="chicken"> Chicken
+        <input type="radio" name="patty" value="veggie"> Veggie
+
+        <label for="cheese">Choose your cheese:</label>
+        <select name="cheese" id="cheese">
+            <option value="cheddar">Cheddar</option>
+            <option value="swiss">Swiss</option>
+            <option value="blue">Blue Cheese</option>
+            <option value="no_cheese">No Cheese</option>
+        </select>
+
+        <label for="toppings">Select your toppings:</label>
+        <input type="checkbox" name="toppings" value="lettuce"> Lettuce
+        <input type="checkbox" name="toppings" value="tomato"> Tomato
+        <input type="checkbox" name="toppings" value="onions"> Onions
+        <input type="checkbox" name="toppings" value="pickles"> Pickles
+
+        <label for="sauce">Choose your sauce:</label>
+        <select name="sauce" id="sauce">
+            <option value="ketchup">Ketchup</option>
+            <option value="mustard">Mustard</option>
+            <option value="mayo">Mayo</option>
+            <option value="bbq">Barbecue Sauce</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Submit Your Burger">
+    </form>
+
+</body>
+</html>
+
