@@ -1,3 +1,36 @@
+
+body {
+    position: relative;
+    overflow: auto;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container1{
+    position: absolute;
+    background: rgba(255, 255, 255, 0)  ;
+    height: 900px;
+    width: 900px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 .container{
     position: absolute;
     background: #d3d3d3bd ;
@@ -15,9 +48,9 @@
     color: rgb(102, 0, 102);
     border: 2px solid rgb(102, 0, 102);
     font-weight: bold;
-    border-radius: 25px;
-    height:50px;
-    width: 150px;
+    border-radius: 30px;
+    height:60px;
+    width: 160px;
     cursor:pointer;
     left:175px;
     top:400px;
@@ -28,7 +61,11 @@
     background-color:rgb(102, 0, 102);
     color:rgb(206, 128, 206);
     border: 2px solid rgb(206, 128, 206);
+    width: 180px;
+    left:160px;
+    top:400px;
 }
+
 .hat{
     position:relative;
     height:70px;
@@ -189,4 +226,31 @@
     top:-50px;
     border:10px;
 }
-
+.costum{
+    display: flex;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;/*centrer le contenu de class*/
+    font-weight: bold;
+    margin: auto;
+}
+.costum img.icon {
+    width: 50px; /* Ajustez la taille selon vos besoins */
+    height: 50px; /* Ajustez la taille selon vos besoins */
+    border-radius: 50%; /* Forme de cercle */
+    margin-right: 10px; /* Ajustez la marge à droite selon vos besoins */
+  }
+.descrition{
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    
+  }
+  .text-dscp{
+    position: absolute;
+    top: 90%; /* Positionner en dessous du dessin */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Centrer horizontalement */
+  }

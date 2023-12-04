@@ -3,52 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customize Your Burger</title>
+    <link rel="stylesheet" href="burger.css">
+    <title>Your Burger, Your Way </title>
 </head>
 <body>
-
-    <h1>Build Your Burger</h1>
-
-    <form action="/submit_burger" method="post">
-        <label for="bun">Choose your bun:</label>
-        <select name="bun" id="bun">
-            <option value="sesame">Sesame Seed Bun</option>
-            <option value="brioche">Brioche Bun</option>
-            <option value="whole_grain">Whole Grain Bun</option>
-        </select>
-
-        <label for="patty">Select your patty:</label>
-        <input type="radio" name="patty" value="beef" checked> Beef
-        <input type="radio" name="patty" value="chicken"> Chicken
-        <input type="radio" name="patty" value="veggie"> Veggie
-
-        <label for="cheese">Choose your cheese:</label>
-        <select name="cheese" id="cheese">
-            <option value="cheddar">Cheddar</option>
-            <option value="swiss">Swiss</option>
-            <option value="blue">Blue Cheese</option>
-            <option value="no_cheese">No Cheese</option>
-        </select>
-
-        <label for="toppings">Select your toppings:</label>
-        <input type="checkbox" name="toppings" value="lettuce"> Lettuce
-        <input type="checkbox" name="toppings" value="tomato"> Tomato
-        <input type="checkbox" name="toppings" value="onions"> Onions
-        <input type="checkbox" name="toppings" value="pickles"> Pickles
-
-        <label for="sauce">Choose your sauce:</label>
-        <select name="sauce" id="sauce">
-            <option value="ketchup">Ketchup</option>
-            <option value="mustard">Mustard</option>
-            <option value="mayo">Mayo</option>
-            <option value="bbq">Barbecue Sauce</option>
-        </select>
-
-        <br>
-
-        <input type="submit" value="Submit Your Burger">
-    </form>
-
+    <div class="navbar">
+        <div class="CustomBite">
+             <img class="icon" src="C:\Users\DELL\Desktop\burger\icon.jpg" alt="Description de l'image">
+            <p>CostumBite</p>
+        </div>
+    
+    </div>
+    <h1 class="page-titre">........................ Build Your Own Burger ........................</h1>
+    <div class="container">
+        <article class="ligne-ondule"></article> 
+        <article class="Sesam-seed-bun1"></article> 
+        <article class="tomato"></article>
+        <article class="lettuce"></article>
+        <article class="onion"></article>
+        <article class="beef"></article>
+        <article class="cheese"></article>
+        <article class="Sesam-seed-bun2"></article> 
+    </div>
+     
 </body>
 </html>
 
