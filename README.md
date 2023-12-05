@@ -1,8 +1,8 @@
 # burger
 # Burger Customizer 'CustomBite'
-## Description du Projet
-CustomBite est un site web permettant aux utilisateurs de personnaliser leur propre burger en utilisant une interface simple. Ce projet a été réalisé en utilisant HTML, CSS et JavaScript.
-## Technologies Utilisées
+## Projet description
+CustomBite is a website that allows users to customize their own burger using a simple interface. This project was implemented using HTML, CSS, and JavaScript.
+##Technologies Used
 - HTML
 - CSS
 - JavaScript
