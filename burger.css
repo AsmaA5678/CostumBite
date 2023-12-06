@@ -11,7 +11,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(206, 128, 206);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,6 @@ body {
     color: white;
     z-index: 2;
   }
-  
   .CustomBite {
     display: flex;
     align-items: center;
@@ -44,13 +43,13 @@ body {
 }
 
   .container{
-    position: fixed;
+    position: absolute;
     position: absolute;
     background: #d3d3d3bd ;
     height: 500px;
     width: 500px;
     left: 50%;
-    top: 800%;
+    top: 600%;
     transform: translate(-50%,-50%);
     box-shadow: 16px 16px 10px #d7d7d7;
     border-radius: 50px;
@@ -159,5 +158,28 @@ body {
       
   background-repeat: no-repeat;
 } 
-
+.container-right{
+  position: absolute;
+  position: absolute;
+  background: #d3d3d3bd ;
+  height: 500px;
+  width: 300px;
+  right: -5%;
+  top: 600%;
+  transform: translate(-50%,-50%);
+  box-shadow: 16px 16px 10px #d7d7d7;
+  border-radius: 50px;
+}
+.container-left{
+  position: absolute;
+  position: absolute;
+  background: #d3d3d3bd ;
+  height: 500px;
+  width: 300px;
+  left: 17%;
+  top: 600%;
+  transform: translate(-50%,-50%);
+  box-shadow: 16px 16px 10px #d7d7d7;
+  border-radius: 50px;
+} 
 

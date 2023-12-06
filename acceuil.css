@@ -4,7 +4,7 @@ body {
     overflow: auto;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
     height: 100vh;
 }
 
@@ -28,7 +28,7 @@ body {
     height: 900px;
     width: 900px;
     left: 50%;
-    top: 50%;
+    top: 44%;
     transform: translate(-50%,-50%);
 }
 .container{
@@ -39,7 +39,6 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    box-shadow: 16px 16px 10px #d7d7d7;
     border-radius: 50px;
 }
 .enter-button{
@@ -250,7 +249,7 @@ body {
   }
   .text-dscp{
     position: absolute;
-    top: 90%; /* Positionner en dessous du dessin */
+    top: 80%; /* Positionner en dessous du dessin */
     left: 50%; /* Centrer horizontalement */
     transform: translateX(-50%); /* Centrer horizontalement */
   }
