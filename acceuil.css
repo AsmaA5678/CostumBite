@@ -253,3 +253,6 @@ body {
     left: 50%; /* Centrer horizontalement */
     transform: translateX(-50%); /* Centrer horizontalement */
   }
+  .text-dscp p {
+    padding-right: 10px;
+  }
