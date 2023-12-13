@@ -4,31 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="burger.css">
+    <link rel="icon" href="website-icon.png" type="image/x*icon">
     <title>Your Burger, Your Way </title>
 </head>
 <body>
     <div class="navbar">
         <div class="CustomBite">
-             <img class="icon" src="C:\Users\DELL\Desktop\burger\icon.jpg" alt="Description de l'image">
-            <p>CostumBite</p>
+            <img class="icon" src="icon.jpg" alt="Description de l'image">
+            <a href="acceuil.html">CostumBite</a> 
         </div>
-    
     </div>
     <h1 class="page-titre">........................ Build Your Own Burger ........................</h1>
     <div class="container">
-        <article class="ligne-ondule"></article> 
         <article class="Sesam-seed-bun1"></article> 
-        <article class="tomato"></article>
-        <article class="lettuce"></article>
-        <article class="onion"></article>
-        <article class="beef"></article>
-        <article class="cheese"></article>
+        <div id="contenu"></div>
         <article class="Sesam-seed-bun2"></article> 
     </div>
     <div class="container-right">
+        <div class="container-title">
+            <h1>Ingredients</h1>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Tomatos</td>
+                    <td>2.00$</td>
+                    <td><button class="moreTomatos">+</button></td>
+                    <td><button class="lessTomatos">-</button></td>
+                </tr>
+                <tr>
+                    <td>lettuce</td>
+                    <td>1.50$</td>
+                    <td><button class="moreLettuce">+</button></td>
+                    <td><button class="lessLettuce">-</button></td>
+                </tr>
+                <tr>
+                    <td>Onion</td>
+                    <td>1.00$</td>
+                    <td><button class="moreOnion">+</button></td>
+                    <td><button class="lessOnion">-</button></td>
+                </tr>
+                <tr>
+                    <td>Beef</td>
+                    <td>1.00$</td>
+                    <td><button class="moreBeef">+</button></td>
+                    <td><button class="lessBeef">-</button></td>
+                </tr>
+                <tr>
+                    <td>Cheese</td>
+                    <td>1.00$</td>
+                    <td><button class="moreCheese">+</button></td>
+                    <td><button class="lessCheese">-</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="container-left">
+        <div class="container-title">
+            <h1>Bill</h1>
+        </div>
+        <div id="added-elements"></div>
+        <div class="footer">
+           <h4>Total</h4> 
+           <h4 class="total">$0.00</h4>
+        </div>
     </div>
+    <script src="burger.script.js"></script>
 </body>
 </html>
 
