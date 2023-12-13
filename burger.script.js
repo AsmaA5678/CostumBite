@@ -17,14 +17,16 @@ const elementContainer = document.getElementById('added-elements');
 const burgerContainer = document.getElementById('contenu');
 let total = 0;
 
+
 // TOMATOS BILL _______________________________________________________________________________________________
 
-const addTomatosBtn = document.querySelector('.moreTomatos');
-addTomatosBtn.addEventListener("click",AddElementToBill);
-let tomatosPrice = elements[0].price;
+let verticalOffset = 0; 
 
-function AddElementToBill() {
-    if (elements[0].quantity==0) {
+const addTomatosBtn = document.querySelector('.moreTomatos');
+addTomatosBtn.addEventListener("click", AddTomatoToBill);
+
+function AddTomatoToBill() {
+    if (elements[0].quantity === 0) {
         const newElement = document.createElement("p");
         newElement.classList.add('elementAddedToBill');
         elements[0].quantity += 1;
@@ -34,8 +36,7 @@ function AddElementToBill() {
 
         total += elements[0].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
-    }
-    else {
+    } else {
         elements[0].quantity += 1;
         tomatosPrice = elements[0].price * elements[0].quantity;
         document.querySelector('.elementAddedToBill').innerHTML = `${elements[0].quantity} ${elements[0].name} : $${tomatosPrice.toFixed(2)}`;
@@ -45,38 +46,50 @@ function AddElementToBill() {
 
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('tomato');
-    burgerContainer.appendChild(newIngredient);
-
-
+    newIngredient.style.top = `${verticalOffset}px`; 
+    verticalOffset -= 20; 
+    burgerContainer.insertBefore(newIngredient, burgerContainer.firstChild); 
 }
 
 const lessTomatosBtn = document.querySelector('.lessTomatos');
-lessTomatosBtn.addEventListener("click",reduceTomatoBill);
+lessTomatosBtn.addEventListener("click", reduceTomatoBill);
 
 function reduceTomatoBill() {
-    if (elements[0].quantity>0) {
+    if (elements[0].quantity > 0) {
         elements[0].quantity -= 1;
         tomatosPrice -= elements[0].price;
         document.querySelector('.elementAddedToBill').innerHTML = `${elements[0].quantity} ${elements[0].name} : $${tomatosPrice.toFixed(2)}`;
         total -= elements[0].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
-    if (elements[0].quantity==0) {
-        var TomatosToRemove = document.querySelector('.elementAddedToBill');
-        TomatosToRemove.parentNode.removeChild(TomatosToRemove);
+    if (elements[0].quantity === 0) {
+        var TomatoesToRemove = document.querySelectorAll('.elementAddedToBill');
+        TomatoesToRemove[0].parentNode.removeChild(TomatoesToRemove[0]);
     }
-    var TomatosToRemoveFromBerger = document.querySelector('.tomato');
-    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
+    var TomatoToRemoveFromBerger = document.querySelector('.tomato');
+    if (TomatoToRemoveFromBerger) {
+    TomatoToRemoveFromBerger.parentNode.removeChild(TomatoToRemoveFromBerger);
+    verticalOffset += 20;
+    adjustIngredientPositions1(); 
+    }
+    function adjustIngredientPositions1() {
+        const ingredients = document.querySelectorAll('.tomato');
+        ingredients.forEach((ingredient, index) => {
+            ingredient.style.top = `${verticalOffset - (20 * index)}px`;
+            // Adjust the top position based on the index
+        });
+    }
+    
 }
+
 
 // LETTUCE BILL _______________________________________________________________________________________________________________________________________________
 
 const addLettuceBtn = document.querySelector('.moreLettuce');
-addLettuceBtn.addEventListener("click",AddLettuceToBill);
-let lettucePrice = elements[1].price;
+addLettuceBtn.addEventListener("click", AddLettuceToBill);
 
 function AddLettuceToBill() {
-    if (elements[1].quantity==0) {
+    if (elements[1].quantity === 0) {
         const newElement = document.createElement("p");
         newElement.classList.add('lettuceAddedToBill');
         elements[1].quantity += 1;
@@ -86,37 +99,52 @@ function AddLettuceToBill() {
 
         total += elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
-    }
-    else {
+    } else {
         elements[1].quantity += 1;
         lettucePrice = elements[1].price * elements[1].quantity;
         document.querySelector('.lettuceAddedToBill').innerHTML = `${elements[1].quantity} ${elements[1].name} : $${lettucePrice.toFixed(2)}`;
         total += elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+    
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('lettuce');
-    burgerContainer.appendChild(newIngredient);
+    newIngredient.style.top = `${verticalOffset}px`; 
+    verticalOffset -= 20; 
+    burgerContainer.insertBefore(newIngredient, burgerContainer.firstChild); 
 }
 
 const lessLettuceBtn = document.querySelector('.lessLettuce');
-lessLettuceBtn.addEventListener("click",reduceLettuceBill);
+lessLettuceBtn.addEventListener("click", reduceLettuceBill);
 
 function reduceLettuceBill() {
-    if (elements[1].quantity>0) {
+    if (elements[1].quantity > 0) {
         elements[1].quantity -= 1;
         lettucePrice -= elements[1].price;
         document.querySelector('.lettuceAddedToBill').innerHTML = `${elements[1].quantity} ${elements[1].name} : $${lettucePrice.toFixed(2)}`;
         total -= elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
-    if (elements[1].quantity==0) {
+    if (elements[1].quantity === 0) {
         var lettuceToRemove = document.querySelector('.lettuceAddedToBill');
         lettuceToRemove.parentNode.removeChild(lettuceToRemove);
     }
-    var TomatosToRemoveFromBerger = document.querySelector('.lettuce');
-    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
+    var lettuceToRemoveFromBerger = document.querySelector('.lettuce');
+    if (lettuceToRemoveFromBerger) {
+        lettuceToRemoveFromBerger.parentNode.removeChild(lettuceToRemoveFromBerger);
+        verticalOffset += 20;
+        adjustIngredientPositions(); // Call the function to adjust positions
+    } 
 }
+
+function adjustIngredientPositions() {
+    const ingredients = document.querySelectorAll('.lettuce');
+    ingredients.forEach((ingredient, index) => {
+        ingredient.style.top = `${verticalOffset - (20 * index)}px`;
+        // Adjust the top position based on the index
+    });
+}
+
 
 
 //  ONION BILL _____________________________________________________________________________________________________________________________________
