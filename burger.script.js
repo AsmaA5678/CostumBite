@@ -14,6 +14,7 @@ const elements = [
 
 
 const elementContainer = document.getElementById('added-elements');
+const burgerContainer = document.getElementById('contenu');
 let total = 0;
 
 // TOMATOS BILL _______________________________________________________________________________________________
@@ -41,6 +42,12 @@ function AddElementToBill() {
         total += elements[0].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+
+    const newIngredient = document.createElement("div");
+    newIngredient.classList.add('tomato');
+    burgerContainer.appendChild(newIngredient);
+
+
 }
 
 const lessTomatosBtn = document.querySelector('.lessTomatos');
@@ -58,6 +65,8 @@ function reduceTomatoBill() {
         var TomatosToRemove = document.querySelector('.elementAddedToBill');
         TomatosToRemove.parentNode.removeChild(TomatosToRemove);
     }
+    var TomatosToRemoveFromBerger = document.querySelector('.tomato');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
 // LETTUCE BILL _______________________________________________________________________________________________________________________________________________
@@ -85,6 +94,9 @@ function AddLettuceToBill() {
         total += elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+    const newIngredient = document.createElement("div");
+    newIngredient.classList.add('lettuce');
+    burgerContainer.appendChild(newIngredient);
 }
 
 const lessLettuceBtn = document.querySelector('.lessLettuce');
@@ -102,6 +114,8 @@ function reduceLettuceBill() {
         var lettuceToRemove = document.querySelector('.lettuceAddedToBill');
         lettuceToRemove.parentNode.removeChild(lettuceToRemove);
     }
+    var TomatosToRemoveFromBerger = document.querySelector('.lettuce');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
 
@@ -130,6 +144,9 @@ function AddOnionToBill() {
         total += elements[2].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+    const newIngredient = document.createElement("div");
+    newIngredient.classList.add('onion');
+    burgerContainer.appendChild(newIngredient);
 }
 
 const lessOnionBtn = document.querySelector('.lessOnion');
@@ -147,6 +164,8 @@ function reduceOnionBill() {
         var onionToRemove = document.querySelector('.onionAddedToBill');
         onionToRemove.parentNode.removeChild(onionToRemove);
     }
+    var TomatosToRemoveFromBerger = document.querySelector('.onion');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
 // BEEF BILL _______________________________________________________________________________________________________________________________________
@@ -174,6 +193,9 @@ function AddBeefToBill() {
         total += elements[3].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+    const newIngredient = document.createElement("div");
+    newIngredient.classList.add('beef');
+    burgerContainer.appendChild(newIngredient);
 }
 
 const lessBeefBtn = document.querySelector('.lessBeef');
@@ -191,6 +213,8 @@ function reduceBeefBill() {
         var beefToRemove = document.querySelector('.beefAddedToBill');
         beefToRemove.parentNode.removeChild(beefToRemove);
     }
+    var TomatosToRemoveFromBerger = document.querySelector('.beef');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
 
@@ -219,6 +243,9 @@ function addCheeseToBill() {
         total += elements[4].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
+    const newIngredient = document.createElement("div");
+    newIngredient.classList.add('cheese');
+    burgerContainer.appendChild(newIngredient);
 }
 
 const lessCheeseBtn = document.querySelector('.lessCheese');
@@ -236,4 +263,6 @@ function reduceCheeseBill() {
         var cheeseToRemove = document.querySelector('.cheeseAddedToBill');
         cheeseToRemove.parentNode.removeChild(cheeseToRemove);
     }
+    var TomatosToRemoveFromBerger = document.querySelector('.cheese');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
