@@ -16,6 +16,7 @@ const elements = [
 const elementContainer = document.getElementById('added-elements');
 const burgerContainer = document.getElementById('contenu');
 let total = 0;
+let verticalOffset = 0;
 
 // TOMATOS BILL _______________________________________________________________________________________________
 
@@ -45,8 +46,9 @@ function AddElementToBill() {
 
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('tomato');
+    newIngredient.style.top = `${verticalOffset}px`;
     burgerContainer.appendChild(newIngredient);
-
+    verticalOffset += 20;
 
 }
 
