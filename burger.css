@@ -52,18 +52,28 @@ body {
   position: absolute;
   background: #d3d3d3bd ;
   height: 500px;
-  width: 500px;
-  left: 50%;
-  top: 600%;
-  transform: translate(-50%,-50%);
+  width: 630px;
+  left: 350px;
+  top: 50px;
   border-radius: 50px;
   z-index: 1;
+  overflow: scroll;
+  justify-content: center;
 }
+.Sesam-seed-bun1 {
+  margin-top: 50px;
+  margin-left: 90px;
+}
+.Sesam-seed-bun2 {
+  margin-bottom: 50px;
+  margin-left: 90px;
+}
+/*
 .Sesam-seed-bun2{
     color:  #ea7;
     font-size: 1vmin;
-    width:80%;
-    height: 80%;
+    width: 430px;
+    height: 430px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -75,12 +85,8 @@ body {
 .cheese{
     color:  #ea7;
     font-size: 1vmin;
-    width:80%;
-    height: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 450px;
     background:
       conic-gradient( gold 77deg, #0000 0 285deg, gold 0) 20% 50% / 90% 20%,
       conic-gradient(orange 76.6deg, #0000 0 285.5deg, orange 0) 20% 50.65%/ 90% 21%,
@@ -90,12 +96,8 @@ body {
 .beef{
   color:  #ea7;
   font-size: 1vmin;
-  width:80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  width: 440px;
+  height: 450px;
   background:
     radial-gradient(50% 90% at 50% 50%, maroon 99%, #0000 0 ) 50% 45%/ 80% 20% ,
     radial-gradient(farthest-side, maroon 99%, #0000 99.9% ) 50% 56%/ 66% 6% ;
@@ -104,12 +106,8 @@ body {
 .lettuce{
   color:  #ea7;
   font-size: 1vmin;
-  width:80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  width: 410px;
+  height: 410px;
   background:
       radial-gradient(farthest-side, rgb(83, 182, 83), green 98%, #0000 99%) 50% 60%/ 50% 7%,
       radial-gradient(farthest-side, green 98%, #0000 99%) 30% 60% / 35% 7%,
@@ -121,12 +119,8 @@ body {
 .tomato{
   color:  #ea7;
   font-size: 1vmin;
-  width:80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  width: 450px;
+  height: 400px;
   background:
   radial-gradient(50% 150% at 50% 50%, tomato 98%, #0000 0 ) 50% 60%/ 70% 9% ,
   radial-gradient(farthest-side, tomato 98%, #0000 99.9% ) 50% 64%/ 66% 6% ;
@@ -135,8 +129,8 @@ body {
 .Sesam-seed-bun1{
   color:  #ea7;
   font-size: 1vmin;
-  width:80%;
-  height: 80%;
+  width: 450px;
+  height: 350px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,30 +139,27 @@ body {
       radial-gradient(50% 140% at 50% 90%,  #ea7 98%, #0000 99%) 50% 65% / 72% 20%,
       radial-gradient(50% 50% at 50% 30%,  #ea7 98%, #0000 99%) 50% 77% / 71.75% 10%;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 .onion{
   color:  #ea7;
   font-size: 1vmin;
-  width:80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 400px;
   background:
       radial-gradient(farthest-side, rgb(226, 217, 191),rgb(170, 22, 163) 100%, #0000 99%) 18% 58% / 30% 6%,
       radial-gradient(farthest-side,  rgb(226, 217, 191),  rgb(170, 22, 163) 100%, #0000 99%) 50% 55%/ 40% 6%,
       radial-gradient(farthest-side, rgb(226, 217, 191), rgb(170, 22, 163) 98%, #0000 99%) 80% 59% / 30% 7%;
-      
   background-repeat: no-repeat;
 } 
+*/
 .container-right {
   position: absolute;
   background: #d3d3d3bd ;
   height: 330px;
   width: 300px;
-  right: -6.5%;
-  top: 600%;
+  right: -130px;
+  top: 300px;
   transform: translate(-50%,-50%);
   border-radius: 50px;
   overflow: auto;
@@ -206,8 +197,8 @@ body {
   background: #d3d3d3bd ;
   height: 330px;
   width: 300px;
-  left: 17%;
-  top: 600%;
+  left: 170px;
+  top: 300px;
   transform: translate(-50%,-50%);
   border-radius: 50px;
   overflow: auto;
@@ -225,3 +216,56 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+#contenu {
+  gap: 0px; 
+  flex-wrap: wrap;
+}
+.tomato {
+  background-image: linear-gradient(to right top, #ba3e1c, #c95a3b, #d6745a, #e28e79, #eba898);
+  width: 400px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.lettuce {
+  background-image: linear-gradient(to right top, #969e2e, #abb044, #c0c158, #d6d46d, #ebe682);
+  width: 400px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.cheese {
+  background-image: linear-gradient(to right top, #f1c733, #eebd30, #eab32d, #e6a92b, #e29f2a);
+  width: 400px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.onion {
+  background-image: linear-gradient(to right top, #e6dde0, #d6c3c9, #c6a9b3, #b6909e, #a57789);
+  width: 400px;
+  height: 10px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.beef {
+  background-image: linear-gradient(to right top, #f08f48, #d07539, #b05d2a, #91451b, #722f0d);
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.Sesam-seed-bun1{
+  background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.Sesam-seed-bun2{
+  background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 90px;
+} 
