@@ -2,31 +2,23 @@ const elements = [
     {id: 0, name: 'Tomatos', price: 2, quantity: 0},
     {id: 1, name: 'Lettuce', price: 1.5, quantity: 0},
     {id: 2, name: 'Onion', price: 1, quantity: 0},
-    {id: 3, name: 'Beef', price: 1, quantity: 0},
-    {id: 4, name: 'Cheese', price: 1, quantity: 0},
-    {id: 5, name: 'French fries', price: 1, quantity: 0},
-    {id: 6, name: 'Water', price: 1, quantity: 0},
-    {id: 7, name: 'Iced tea', price: 1, quantity: 0},
-    {id: 8, name: 'Soda', price: 1, quantity: 0},
-    {id: 9, name: 'Milkshake', price: 1, quantity: 0},
-    {id: 10, name: 'Juice', price: 1, quantity: 0}
+    {id: 3, name: 'Beef', price: 8.25, quantity: 0},
+    {id: 4, name: 'Cheese', price: 5.75, quantity: 0},
 ]; 
-
 
 const elementContainer = document.getElementById('added-elements');
 const burgerContainer = document.getElementById('contenu');
 let total = 0;
+let verticalOffset = 0;
 
-
-// TOMATOS BILL _______________________________________________________________________________________________
-
-let verticalOffset = 0; 
+// TOMATOS  _______________________________________________________________________________________________
 
 const addTomatosBtn = document.querySelector('.moreTomatos');
-addTomatosBtn.addEventListener("click", AddTomatoToBill);
+addTomatosBtn.addEventListener("click",AddElementToBill);
+let tomatosPrice = elements[0].price;
 
-function AddTomatoToBill() {
-    if (elements[0].quantity === 0) {
+function AddElementToBill() {
+    if (elements[0].quantity==0) {
         const newElement = document.createElement("p");
         newElement.classList.add('elementAddedToBill');
         elements[0].quantity += 1;
@@ -36,7 +28,8 @@ function AddTomatoToBill() {
 
         total += elements[0].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
-    } else {
+    }
+    else {
         elements[0].quantity += 1;
         tomatosPrice = elements[0].price * elements[0].quantity;
         document.querySelector('.elementAddedToBill').innerHTML = `${elements[0].quantity} ${elements[0].name} : $${tomatosPrice.toFixed(2)}`;
@@ -46,50 +39,39 @@ function AddTomatoToBill() {
 
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('tomato');
-    newIngredient.style.top = `${verticalOffset}px`; 
-    verticalOffset -= 20; 
-    burgerContainer.insertBefore(newIngredient, burgerContainer.firstChild); 
+    newIngredient.style.top = `${verticalOffset}px`;
+    burgerContainer.appendChild(newIngredient);
+    verticalOffset += 20;
+
 }
 
 const lessTomatosBtn = document.querySelector('.lessTomatos');
-lessTomatosBtn.addEventListener("click", reduceTomatoBill);
+lessTomatosBtn.addEventListener("click",reduceTomatoBill);
 
 function reduceTomatoBill() {
-    if (elements[0].quantity > 0) {
+    if (elements[0].quantity>0) {
         elements[0].quantity -= 1;
         tomatosPrice -= elements[0].price;
         document.querySelector('.elementAddedToBill').innerHTML = `${elements[0].quantity} ${elements[0].name} : $${tomatosPrice.toFixed(2)}`;
         total -= elements[0].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
-    if (elements[0].quantity === 0) {
-        var TomatoesToRemove = document.querySelectorAll('.elementAddedToBill');
-        TomatoesToRemove[0].parentNode.removeChild(TomatoesToRemove[0]);
+    if (elements[0].quantity==0) {
+        var TomatosToRemove = document.querySelector('.elementAddedToBill');
+        TomatosToRemove.parentNode.removeChild(TomatosToRemove);
     }
-    var TomatoToRemoveFromBerger = document.querySelector('.tomato');
-    if (TomatoToRemoveFromBerger) {
-    TomatoToRemoveFromBerger.parentNode.removeChild(TomatoToRemoveFromBerger);
-    verticalOffset += 20;
-    adjustIngredientPositions1(); 
-    }
-    function adjustIngredientPositions1() {
-        const ingredients = document.querySelectorAll('.tomato');
-        ingredients.forEach((ingredient, index) => {
-            ingredient.style.top = `${verticalOffset - (20 * index)}px`;
-            // Adjust the top position based on the index
-        });
-    }
-    
+    var TomatosToRemoveFromBerger = document.querySelector('.tomato');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
-
-// LETTUCE BILL _______________________________________________________________________________________________________________________________________________
+// LETTUCE  _______________________________________________________________________________________________________________________________________________
 
 const addLettuceBtn = document.querySelector('.moreLettuce');
-addLettuceBtn.addEventListener("click", AddLettuceToBill);
+addLettuceBtn.addEventListener("click",AddLettuceToBill);
+let lettucePrice = elements[1].price;
 
 function AddLettuceToBill() {
-    if (elements[1].quantity === 0) {
+    if (elements[1].quantity==0) {
         const newElement = document.createElement("p");
         newElement.classList.add('lettuceAddedToBill');
         elements[1].quantity += 1;
@@ -99,55 +81,40 @@ function AddLettuceToBill() {
 
         total += elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
-    } else {
+    }
+    else {
         elements[1].quantity += 1;
         lettucePrice = elements[1].price * elements[1].quantity;
         document.querySelector('.lettuceAddedToBill').innerHTML = `${elements[1].quantity} ${elements[1].name} : $${lettucePrice.toFixed(2)}`;
         total += elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
-    
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('lettuce');
-    newIngredient.style.top = `${verticalOffset}px`; 
-    verticalOffset -= 20; 
-    burgerContainer.insertBefore(newIngredient, burgerContainer.firstChild); 
+    burgerContainer.appendChild(newIngredient);
 }
 
 const lessLettuceBtn = document.querySelector('.lessLettuce');
-lessLettuceBtn.addEventListener("click", reduceLettuceBill);
+lessLettuceBtn.addEventListener("click",reduceLettuceBill);
 
 function reduceLettuceBill() {
-    if (elements[1].quantity > 0) {
+    if (elements[1].quantity>0) {
         elements[1].quantity -= 1;
         lettucePrice -= elements[1].price;
         document.querySelector('.lettuceAddedToBill').innerHTML = `${elements[1].quantity} ${elements[1].name} : $${lettucePrice.toFixed(2)}`;
         total -= elements[1].price;
         document.querySelector('.total').innerHTML = `$${total.toFixed(2)}`;
     }
-    if (elements[1].quantity === 0) {
+    if (elements[1].quantity==0) {
         var lettuceToRemove = document.querySelector('.lettuceAddedToBill');
         lettuceToRemove.parentNode.removeChild(lettuceToRemove);
     }
-    var lettuceToRemoveFromBerger = document.querySelector('.lettuce');
-    if (lettuceToRemoveFromBerger) {
-        lettuceToRemoveFromBerger.parentNode.removeChild(lettuceToRemoveFromBerger);
-        verticalOffset += 20;
-        adjustIngredientPositions(); // Call the function to adjust positions
-    } 
-}
-
-function adjustIngredientPositions() {
-    const ingredients = document.querySelectorAll('.lettuce');
-    ingredients.forEach((ingredient, index) => {
-        ingredient.style.top = `${verticalOffset - (20 * index)}px`;
-        // Adjust the top position based on the index
-    });
+    var TomatosToRemoveFromBerger = document.querySelector('.lettuce');
+    TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
 
-
-//  ONION BILL _____________________________________________________________________________________________________________________________________
+//  ONION  _____________________________________________________________________________________________________________________________________
 
 const addOnionBtn = document.querySelector('.moreOnion');
 addOnionBtn.addEventListener("click",AddOnionToBill);
@@ -196,7 +163,7 @@ function reduceOnionBill() {
     TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
-// BEEF BILL _______________________________________________________________________________________________________________________________________
+// BEEF  _______________________________________________________________________________________________________________________________________
 
 const addBeefBtn = document.querySelector('.moreBeef');
 addBeefBtn.addEventListener("click",AddBeefToBill);
@@ -246,7 +213,7 @@ function reduceBeefBill() {
 }
 
 
-// CHEESE BILL _______________________________________________________________________________________________________________________________________
+// CHEESE  _______________________________________________________________________________________________________________________________________
 
 const addCheeseBtn = document.querySelector('.moreCheese');
 addCheeseBtn.addEventListener("click",addCheeseToBill);
