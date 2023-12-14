@@ -2,23 +2,16 @@ const elements = [
     {id: 0, name: 'Tomatos', price: 2, quantity: 0},
     {id: 1, name: 'Lettuce', price: 1.5, quantity: 0},
     {id: 2, name: 'Onion', price: 1, quantity: 0},
-    {id: 3, name: 'Beef', price: 1, quantity: 0},
-    {id: 4, name: 'Cheese', price: 1, quantity: 0},
-    {id: 5, name: 'French fries', price: 1, quantity: 0},
-    {id: 6, name: 'Water', price: 1, quantity: 0},
-    {id: 7, name: 'Iced tea', price: 1, quantity: 0},
-    {id: 8, name: 'Soda', price: 1, quantity: 0},
-    {id: 9, name: 'Milkshake', price: 1, quantity: 0},
-    {id: 10, name: 'Juice', price: 1, quantity: 0}
+    {id: 3, name: 'Beef', price: 8.25, quantity: 0},
+    {id: 4, name: 'Cheese', price: 5.75, quantity: 0},
 ]; 
-
 
 const elementContainer = document.getElementById('added-elements');
 const burgerContainer = document.getElementById('contenu');
 let total = 0;
 let verticalOffset = 0;
 
-// TOMATOS BILL _______________________________________________________________________________________________
+// TOMATOS  _______________________________________________________________________________________________
 
 const addTomatosBtn = document.querySelector('.moreTomatos');
 addTomatosBtn.addEventListener("click",AddElementToBill);
@@ -71,7 +64,7 @@ function reduceTomatoBill() {
     TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
-// LETTUCE BILL _______________________________________________________________________________________________________________________________________________
+// LETTUCE  _______________________________________________________________________________________________________________________________________________
 
 const addLettuceBtn = document.querySelector('.moreLettuce');
 addLettuceBtn.addEventListener("click",AddLettuceToBill);
@@ -121,7 +114,7 @@ function reduceLettuceBill() {
 }
 
 
-//  ONION BILL _____________________________________________________________________________________________________________________________________
+//  ONION  _____________________________________________________________________________________________________________________________________
 
 const addOnionBtn = document.querySelector('.moreOnion');
 addOnionBtn.addEventListener("click",AddOnionToBill);
@@ -170,7 +163,7 @@ function reduceOnionBill() {
     TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
 
-// BEEF BILL _______________________________________________________________________________________________________________________________________
+// BEEF  _______________________________________________________________________________________________________________________________________
 
 const addBeefBtn = document.querySelector('.moreBeef');
 addBeefBtn.addEventListener("click",AddBeefToBill);
@@ -220,7 +213,7 @@ function reduceBeefBill() {
 }
 
 
-// CHEESE BILL _______________________________________________________________________________________________________________________________________
+// CHEESE  _______________________________________________________________________________________________________________________________________
 
 const addCheeseBtn = document.querySelector('.moreCheese');
 addCheeseBtn.addEventListener("click",addCheeseToBill);

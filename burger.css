@@ -60,14 +60,6 @@ body {
   overflow: scroll;
   justify-content: center;
 }
-.Sesam-seed-bun1 {
-  margin-top: 50px;
-  margin-left: 90px;
-}
-.Sesam-seed-bun2 {
-  margin-bottom: 50px;
-  margin-left: 90px;
-}
 /*
 .Sesam-seed-bun2{
     color:  #ea7;
@@ -210,62 +202,66 @@ body {
   margin-right: 20px;
   border-top: 1px solid black;
 }
+#contenu {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .elementAddedToBill, .lettuceAddedToBill, .onionAddedToBill, .beefAddedToBill, .cheeseAddedToBill {
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
   margin-right: 20px;
 }
-#contenu {
-  gap: 0px; 
-  flex-wrap: wrap;
-}
 .tomato {
   background-image: linear-gradient(to right top, #ba3e1c, #c95a3b, #d6745a, #e28e79, #eba898);
-  width: 400px;
+  width: 300px;
   height: 10px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
 }
 .lettuce {
   background-image: linear-gradient(to right top, #969e2e, #abb044, #c0c158, #d6d46d, #ebe682);
-  width: 400px;
+  width: 300px;
   height: 10px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
 }
 .cheese {
   background-image: linear-gradient(to right top, #f1c733, #eebd30, #eab32d, #e6a92b, #e29f2a);
-  width: 400px;
+  width: 300px;
   height: 10px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
 }
 .onion {
   background-image: linear-gradient(to right top, #e6dde0, #d6c3c9, #c6a9b3, #b6909e, #a57789);
-  width: 400px;
+  width: 300px;
   height: 10px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
 }
 .beef {
   background-image: linear-gradient(to right top, #f08f48, #d07539, #b05d2a, #91451b, #722f0d);
-  width: 400px;
-  height: 30px;
+  width: 300px;
+  height: 40px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
 }
 .Sesam-seed-bun1{
   background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
-  width: 400px;
-  height: 30px;
-  border-radius: 10px;
-  margin-left: 90px;
+  width: 300px;
+  height: 70px;
+  border-radius: 125px 125px 10px 10px;
+  margin-left: 160px;
+  margin-bottom: 3px;
+  margin-top: 50px;
 }
 .Sesam-seed-bun2{
   background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
-  width: 400px;
+  width: 300px;
   height: 30px;
   border-radius: 10px;
-  margin-left: 90px;
+  margin-left: 160px;
+  margin-top: 3px;
+  margin-bottom: 50px;
 } 
