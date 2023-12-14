@@ -1,267 +1,259 @@
-
 body {
-    position: relative;
-    overflow: auto;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1px;
-    color: white;
-    z-index: 2;
-  }
-  .CustomBite {
-    display: flex;
-    align-items: center;
-    font-size: 1.5em;
-    margin-left: 30px; 
-  }
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  color: white;
+  z-index: 2;
+}
+.CustomBite {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  margin-left: 30px; 
+}
 
 .CustomBite a {
-  padding: 15px;
-  text-decoration: none;
+padding: 15px;
+text-decoration: none;
 }
 
 .CustomBite a:hover {
-  color: white;
+color: white;
 }
 .CustomBite img.icon {
-  width: 40px; 
-  height: 40px; 
-  border-radius: 50%; 
-  
+width: 40px; 
+height: 40px; 
+border-radius: 50%; 
+
 }
 .page-titre {
-  margin-top: 50px; 
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  font-family: 'Brush Script MT';
-  padding: 10px;
+margin-top: 50px; 
+font-size: 25px;
+font-weight: bold;
+text-align: center;
+font-family: 'Brush Script MT';
+padding: 10px;
 }
 .container{
-  position: absolute;
-  background: #d3d3d3bd ;
-  height: 500px;
-  width: 630px;
-  left: 350px;
-  top: 50px;
-  border-radius: 50px;
-  z-index: 1;
-  overflow: scroll;
-  justify-content: center;
+position: absolute;
+background: #d3d3d3bd ;
+height: 500px;
+width: 630px;
+left: 350px;
+top: 50px;
+border-radius: 50px;
+z-index: 1;
+overflow: scroll;
+justify-content: center;
 }
-/*
-.Sesam-seed-bun2{
-    color:  #ea7;
-    font-size: 1vmin;
-    width: 430px;
-    height: 430px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: radial-gradient(farthest-side at 50% 100%, #ea7 99.5%, #0000 99.9%) 50% 20% / 80% 20%, 
-                radial-gradient(farthest-side at 50% 0%, #ea7 99.5%, #0000 99.9%) 50% 39.85% / 80% 10%;
-    background-repeat: no-repeat;
-} 
-.cheese{
-    color:  #ea7;
-    font-size: 1vmin;
-    width: 450px;
-    height: 450px;
-    background:
-      conic-gradient( gold 77deg, #0000 0 285deg, gold 0) 20% 50% / 90% 20%,
-      conic-gradient(orange 76.6deg, #0000 0 285.5deg, orange 0) 20% 50.65%/ 90% 21%,
-      conic-gradient(at 50% 30%, #0000 0 99deg, gold 0 259.5deg, #0000 0) 20% 33.25% / 90% 10%;
-    background-repeat: no-repeat;
-} 
-.beef{
-  color:  #ea7;
-  font-size: 1vmin;
-  width: 440px;
-  height: 450px;
-  background:
-    radial-gradient(50% 90% at 50% 50%, maroon 99%, #0000 0 ) 50% 45%/ 80% 20% ,
-    radial-gradient(farthest-side, maroon 99%, #0000 99.9% ) 50% 56%/ 66% 6% ;
-  background-repeat: no-repeat;
-} 
-.lettuce{
-  color:  #ea7;
-  font-size: 1vmin;
-  width: 410px;
-  height: 410px;
-  background:
-      radial-gradient(farthest-side, rgb(83, 182, 83), green 98%, #0000 99%) 50% 60%/ 50% 7%,
-      radial-gradient(farthest-side, green 98%, #0000 99%) 30% 60% / 35% 7%,
-      radial-gradient(farthest-side, rgb(90, 190, 90), green 98%, #0000 99%) 18% 57% / 35% 10%,
-      radial-gradient(farthest-side, green 98%, #0000 99%) 30% 60% / 35% 7%, 
-      radial-gradient(farthest-side, rgb(87, 192, 87), green 98%, #0000 99%) 80% 58% / 45% 10%;
-  background-repeat: no-repeat;
-} 
-.tomato{
-  color:  #ea7;
-  font-size: 1vmin;
-  width: 450px;
-  height: 400px;
-  background:
-  radial-gradient(50% 150% at 50% 50%, tomato 98%, #0000 0 ) 50% 60%/ 70% 9% ,
-  radial-gradient(farthest-side, tomato 98%, #0000 99.9% ) 50% 64%/ 66% 6% ;
-  background-repeat: no-repeat;
-}
-.Sesam-seed-bun1{
-  color:  #ea7;
-  font-size: 1vmin;
-  width: 450px;
-  height: 350px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: 
-      radial-gradient(50% 140% at 50% 90%,  #ea7 98%, #0000 99%) 50% 65% / 72% 20%,
-      radial-gradient(50% 50% at 50% 30%,  #ea7 98%, #0000 99%) 50% 77% / 71.75% 10%;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-.onion{
-  color:  #ea7;
-  font-size: 1vmin;
-  width: 400px;
-  height: 400px;
-  background:
-      radial-gradient(farthest-side, rgb(226, 217, 191),rgb(170, 22, 163) 100%, #0000 99%) 18% 58% / 30% 6%,
-      radial-gradient(farthest-side,  rgb(226, 217, 191),  rgb(170, 22, 163) 100%, #0000 99%) 50% 55%/ 40% 6%,
-      radial-gradient(farthest-side, rgb(226, 217, 191), rgb(170, 22, 163) 98%, #0000 99%) 80% 59% / 30% 7%;
-  background-repeat: no-repeat;
-} 
-*/
+
 .container-right {
-  position: absolute;
-  background: #d3d3d3bd ;
-  height: 330px;
-  width: 300px;
-  right: -130px;
-  top: 300px;
-  transform: translate(-50%,-50%);
-  border-radius: 50px;
-  overflow: auto;
+position: absolute;
+background: #d3d3d3bd ;
+height: 330px;
+width: 300px;
+right: -130px;
+top: 300px;
+transform: translate(-50%,-50%);
+border-radius: 50px;
+overflow: auto;
 }
 .container-title {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #fff;
-  height: 40px;
-  text-decoration: underline;
+margin: 0;
+padding: 0;
+text-align: center;
+color: #fff;
+height: 40px;
+text-decoration: underline;
 }
 .container-right h1, .container-left h1 {
-  font-family: 'Brush Script MT';
-  color: black;
+font-family: 'Brush Script MT';
+color: black;
 }
 .container-right table {
-  margin: 30px;
-  color: black;
-  text-decoration: none;
-  width: 240px;
-  padding-top: 20px;
+margin: 30px;
+color: black;
+text-decoration: none;
+width: 240px;
+padding-top: 20px;
 }
 .container-right table td button {
-  width: 40px;
-  border-radius: 10px;
-  border-color: transparent;
-  margin-left: 10px;
+width: 40px;
+border-radius: 10px;
+border-color: transparent;
+margin-left: 10px;
 }
 .container-right table td button:hover {
-  background-color: #e73c7e;
+background-color: #e73c7e;
 }
 .container-left{
-  position: absolute;
-  background: #d3d3d3bd ;
-  height: 330px;
-  width: 300px;
-  left: 170px;
-  top: 300px;
-  transform: translate(-50%,-50%);
-  border-radius: 50px;
-  overflow: auto;
+position: absolute;
+background: #d3d3d3bd ;
+height: 330px;
+width: 300px;
+left: 170px;
+top: 300px;
+transform: translate(-50%,-50%);
+border-radius: 50px;
+overflow: auto;
 } 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-top: 1px solid black;
+display: flex;
+justify-content: space-between;
+margin-left: 20px;
+margin-right: 20px;
+border-top: 1px solid black;
 }
 #contenu {
-  display: flex;
-  flex-direction: column-reverse;
+display: flex;
+flex-direction: column-reverse;
 }
 .elementAddedToBill, .lettuceAddedToBill, .onionAddedToBill, .beefAddedToBill, .cheeseAddedToBill {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
+display: flex;
+justify-content: space-between;
+margin-left: 20px;
+margin-right: 20px;
 }
 .tomato {
-  background-image: linear-gradient(to right top, #ba3e1c, #c95a3b, #d6745a, #e28e79, #eba898);
-  width: 300px;
-  height: 10px;
-  border-radius: 10px;
-  margin-left: 160px;
+background-image: linear-gradient(to right top, tomato, tomato, tomato, tomato, tomato);
+width: 300px;
+height: 20px;
+border-radius: 10px;
+margin-left: 160px;
 }
+
+
 .lettuce {
-  background-image: linear-gradient(to right top, #969e2e, #abb044, #c0c158, #d6d46d, #ebe682);
-  width: 300px;
-  height: 10px;
-  border-radius: 10px;
-  margin-left: 160px;
+background-image: linear-gradient(to right top, #34751e, #33781c, #32761b, #2a7811, #26710d);
+width: 300px;
+height: 10px;
+border-radius: 10px;
+margin-left: 160px;
 }
 .cheese {
-  background-image: linear-gradient(to right top, #f1c733, #eebd30, #eab32d, #e6a92b, #e29f2a);
-  width: 300px;
-  height: 10px;
-  border-radius: 10px;
-  margin-left: 160px;
+background-image: linear-gradient(to right top, #f1c733, #eebd30, #eab32d, #e6a92b, #e29f2a);
+width: 300px;
+height: 10px;
+border-radius: 10px;
+margin-left: 160px;
 }
 .onion {
-  background-image: linear-gradient(to right top, #e6dde0, #d6c3c9, #c6a9b3, #b6909e, #a57789);
-  width: 300px;
-  height: 10px;
-  border-radius: 10px;
-  margin-left: 160px;
+background-image: linear-gradient(to right top, #e6dde0, #d6c3c9, #c6a9b3, #b6909e, #a57789);
+width: 300px;
+height: 10px;
+border-radius: 10px;
+margin-left: 160px;
+box-shadow: inset -2px -3px #c6a9b3;
 }
 .beef {
-  background-image: linear-gradient(to right top, #f08f48, #d07539, #b05d2a, #91451b, #722f0d);
-  width: 300px;
-  height: 40px;
-  border-radius: 10px;
-  margin-left: 160px;
+background-image: linear-gradient(to right top,  #7b320e,#7b320e);
+width: 300px;
+height: 36px;
+border-radius: 18px;
+margin-left: 160px;
+box-shadow: inset -6px -3px #7f3611de
 }
 .Sesam-seed-bun1{
-  background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
-  width: 300px;
-  height: 70px;
-  border-radius: 125px 125px 10px 10px;
-  margin-left: 160px;
-  margin-bottom: 3px;
-  margin-top: 50px;
+background-image: linear-gradient(to right top,#de6e2e,#df7c3a);
+width: 300px;
+height: 70px;
+border-radius: 50% 50% 0 0;
+margin-left: 160px;
+margin-bottom: 3px;
+margin-top: 50px;
+box-shadow: inset -16px 0 #c15711;
 }
+.Seed1{
+ position:absolute;
+ width:1%;
+ height: 4%;
+ background-color:rgb(255, 237, 216);
+ left:40%;
+ top:10%;
+ border-radius: 40%;
+ transform:rotate(-40deg);
+ box-shadow: inset -2px -3px rgb(187, 146, 96);
+}
+.Seed1:after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height: 100%;
+  background-color:rgb(255, 237, 216);
+  left:-600%;
+  top:-80%;
+  border-radius: 40%;
+  transform:rotate(-80deg);
+  box-shadow: inset -2px -3px rgb(187, 146, 96);
+ }
+ .Seed1:before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height: 100%;
+  background-color:rgb(255, 237, 216);
+  left:300%;
+  top:180%;
+  border-radius: 40%;
+  transform:rotate(-100deg);
+  box-shadow: inset -2px -3px rgb(187, 146, 96);
+ }
+ .Seed2{
+  position:absolute;
+  width:1%;
+  height: 4%;
+  background-color:rgb(255, 237, 216);
+  left:60%;
+  top:10%;
+  border-radius: 40%;
+  transform:rotate(-40deg);
+  box-shadow: inset -2px -3px rgb(187, 146, 96);
+ }
+ .Seed2:after{
+   content:"";
+   position:absolute;
+   width:100%;
+   height: 100%;
+   background-color:rgb(255, 237, 216);
+   left:-600%;
+   top:-80%;
+   border-radius: 40%;
+   transform:rotate(-80deg);
+   box-shadow: inset -2px -3px rgb(187, 146, 96);
+  }
+  .Seed2:before{
+   content:"";
+   position:absolute;
+   width:100%;
+   height: 100%;
+   background-color:rgb(255, 237, 216);
+   left:300%;
+   top:180%;
+   border-radius: 40%;
+   transform:rotate(-100deg);
+   box-shadow: inset -2px -3px rgb(187, 146, 96);
+  }
+
 .Sesam-seed-bun2{
-  background-image: linear-gradient(to right top, #c89150, #d3a15f, #deb16e, #eac27e, #f5d28e);
-  width: 300px;
-  height: 30px;
-  border-radius: 10px;
-  margin-left: 160px;
-  margin-top: 3px;
-  margin-bottom: 50px;
+background-image: linear-gradient(to right top, #de6e2e,#df7c3a);
+width: 300px;
+height: 30px;
+border-radius: 0 0 30px 30px;
+margin-left: 160px;
+margin-top: 3px;
+margin-bottom: 50px;
+box-shadow: inset -14px 0 #c15711;
 } 
