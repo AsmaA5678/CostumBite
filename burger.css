@@ -28,6 +28,7 @@ body {
 .CustomBite a {
 padding: 15px;
 text-decoration: none;
+color:white;
 }
 
 .CustomBite a:hover {
@@ -128,64 +129,62 @@ margin-left: 20px;
 margin-right: 20px;
 }
 .tomato {
-background-image: linear-gradient(to right top, tomato, tomato, tomato, tomato, tomato);
-width: 300px;
-height: 20px;
+background-image: linear-gradient(to right top, tomato, tomato, tomato, rgb(255, 89, 59), rgb(254, 87, 58));
+width: 250px;
+height: 25px;
 border-radius: 10px;
 margin-left: 160px;
 }
 
 
 .lettuce {
-background-image: linear-gradient(to right top, #34751e, #33781c, #32761b, #2a7811, #26710d);
-width: 300px;
-height: 10px;
+background-image: linear-gradient(to right top, #85B53A, #85B53A, #85B53A, #85B53A, #91c63d);
+width: 250px;
+height: 20px;
 border-radius: 10px;
 margin-left: 160px;
 }
 .cheese {
 background-image: linear-gradient(to right top, #f1c733, #eebd30, #eab32d, #e6a92b, #e29f2a);
-width: 300px;
-height: 10px;
+width: 250px;
+height: 15px;
 border-radius: 10px;
 margin-left: 160px;
 }
 .onion {
-background-image: linear-gradient(to right top, #e6dde0, #d6c3c9, #c6a9b3, #b6909e, #a57789);
-width: 300px;
-height: 10px;
+background-image: linear-gradient(to right top, #7F2F86, #a57789, #7F2F86, #a57789,#7F2F86);
+width: 250px;
+height: 15px;
 border-radius: 10px;
 margin-left: 160px;
-box-shadow: inset -2px -3px #c6a9b3;
 }
 .beef {
-background-image: linear-gradient(to right top,  #7b320e,#7b320e);
-width: 300px;
-height: 36px;
+background-image: linear-gradient(to right top,  #883b14,#883b14);
+width: 250px;
+height: 35px;
 border-radius: 18px;
 margin-left: 160px;
 box-shadow: inset -6px -3px #7f3611de
 }
 .Sesam-seed-bun1{
-background-image: linear-gradient(to right top,#de6e2e,#df7c3a);
-width: 300px;
+background-image: linear-gradient(to right top,#E07A30,#E07A30);
+width: 250px;
 height: 70px;
-border-radius: 50% 50% 0 0;
+border-radius: 60% 60% 10% 10%;
 margin-left: 160px;
 margin-bottom: 3px;
 margin-top: 50px;
-box-shadow: inset -16px 0 #c15711;
+box-shadow: inset -9px 0 #d4732e, inset 9px 0 #d4732e;
 }
 .Seed1{
  position:absolute;
  width:1%;
- height: 4%;
+ height: 2%;
  background-color:rgb(255, 237, 216);
- left:40%;
- top:10%;
- border-radius: 40%;
+ left:35%;
+ top:15%;
+ border-radius: 50%;
  transform:rotate(-40deg);
- box-shadow: inset -2px -3px rgb(187, 146, 96);
 }
 .Seed1:after{
   content:"";
@@ -193,11 +192,10 @@ box-shadow: inset -16px 0 #c15711;
   width:100%;
   height: 100%;
   background-color:rgb(255, 237, 216);
-  left:-600%;
-  top:-80%;
-  border-radius: 40%;
+  left:-700%;
+  top:-100%;
+  border-radius: 50%;
   transform:rotate(-80deg);
-  box-shadow: inset -2px -3px rgb(187, 146, 96);
  }
  .Seed1:before{
   content:"";
@@ -205,22 +203,20 @@ box-shadow: inset -16px 0 #c15711;
   width:100%;
   height: 100%;
   background-color:rgb(255, 237, 216);
-  left:300%;
+  left:600%;
   top:180%;
-  border-radius: 40%;
+  border-radius: 50%;
   transform:rotate(-100deg);
-  box-shadow: inset -2px -3px rgb(187, 146, 96);
  }
  .Seed2{
   position:absolute;
   width:1%;
-  height: 4%;
+  height: 2%;
   background-color:rgb(255, 237, 216);
-  left:60%;
-  top:10%;
-  border-radius: 40%;
+  left:50%;
+  top:15%;
+  border-radius: 50%;
   transform:rotate(-40deg);
-  box-shadow: inset -2px -3px rgb(187, 146, 96);
  }
  .Seed2:after{
    content:"";
@@ -228,11 +224,10 @@ box-shadow: inset -16px 0 #c15711;
    width:100%;
    height: 100%;
    background-color:rgb(255, 237, 216);
-   left:-600%;
+   left:-900%;
    top:-80%;
-   border-radius: 40%;
+   border-radius: 50%;
    transform:rotate(-80deg);
-   box-shadow: inset -2px -3px rgb(187, 146, 96);
   }
   .Seed2:before{
    content:"";
@@ -241,19 +236,109 @@ box-shadow: inset -16px 0 #c15711;
    height: 100%;
    background-color:rgb(255, 237, 216);
    left:300%;
-   top:180%;
-   border-radius: 40%;
+   top:400%;
+   border-radius: 50%;
    transform:rotate(-100deg);
-   box-shadow: inset -2px -3px rgb(187, 146, 96);
   }
+  .Seed3{
+    position:absolute;
+    width:1%;
+    height: 2%;
+    background-color:rgb(255, 237, 216);
+    left:60%;
+    top:15%;
+    border-radius: 50%;
+    transform:rotate(-40deg);
+   }
+   .Seed3:after{
+     content:"";
+     position:absolute;
+     width:100%;
+     height: 100%;
+     background-color:rgb(255, 237, 216);
+     left:-950%;
+     top:-100%;
+     border-radius: 50%;
+     transform:rotate(-80deg);
+    }
+    .Seed3:before{
+     content:"";
+     position:absolute;
+     width:100%;
+     height: 100%;
+     background-color:rgb(255, 237, 216);
+     left:0%;
+     top:350%;
+     border-radius: 50%;
+     transform:rotate(-100deg);
+    }
 
 .Sesam-seed-bun2{
-background-image: linear-gradient(to right top, #de6e2e,#df7c3a);
-width: 300px;
+background-image: linear-gradient(to right top, #E07A30,#E07A30);
+width: 250px;
 height: 30px;
-border-radius: 0 0 30px 30px;
+border-radius: 10px 10px 30px 30px;
 margin-left: 160px;
 margin-top: 3px;
 margin-bottom: 50px;
-box-shadow: inset -14px 0 #c15711;
+box-shadow: inset -9px 0 #d67632, inset 9px 0 #d4732e;
 } 
+.showTotalBtn {
+  background-color: rgba(255, 255, 255, 0.674);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin-left: 100px;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.showTotalBtn:hover,
+.showTotalBtn:focus {
+  background-color:  #e73c7e;
+}
+.totalContainer{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 500px;
+  top: 160px;
+  border-radius: 50px;
+  z-index: 1;
+  justify-content: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  }
+  
+  .totalText {
+    margin-top: 50px; 
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Brush Script MT';
+    padding: 10px;
+}
+
+.bonAppetitText {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Brush Script MT';
+    padding: 10px;
+}

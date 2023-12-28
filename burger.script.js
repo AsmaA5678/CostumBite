@@ -261,3 +261,16 @@ function reduceCheeseBill() {
     var TomatosToRemoveFromBerger = document.querySelector('.cheese');
     TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
+//_____________________________________________________________________
+const showTotalBtn = document.querySelector('.showTotalBtn');
+const totalContainer = document.getElementById('totalContainer');
+const totalAmountSpan = document.querySelector('.totalAmount');
+
+totalContainer.style.display = 'none'; 
+
+showTotalBtn.addEventListener("click", showTotal);
+
+function showTotal() {
+    totalAmountSpan.textContent = `$${total.toFixed(2)}`;
+    totalContainer.style.display = 'block';
+}
