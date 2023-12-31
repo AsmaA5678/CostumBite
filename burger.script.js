@@ -9,13 +9,12 @@ const elements = [
 const elementContainer = document.getElementById('added-elements');
 const burgerContainer = document.getElementById('contenu');
 let total = 0;
-let verticalOffset = 0;
 
 // TOMATOS  _______________________________________________________________________________________________
 
 const addTomatosBtn = document.querySelector('.moreTomatos');
 addTomatosBtn.addEventListener("click",AddElementToBill);
-let tomatosPrice = elements[0].price;
+let tomato CXWsPrice = elements[0].price;
 
 function AddElementToBill() {
     if (elements[0].quantity==0) {
@@ -39,9 +38,7 @@ function AddElementToBill() {
 
     const newIngredient = document.createElement("div");
     newIngredient.classList.add('tomato');
-    newIngredient.style.top = `${verticalOffset}px`;
     burgerContainer.appendChild(newIngredient);
-    verticalOffset += 20;
 
 }
 
@@ -261,7 +258,9 @@ function reduceCheeseBill() {
     var TomatosToRemoveFromBerger = document.querySelector('.cheese');
     TomatosToRemoveFromBerger.parentNode.removeChild(TomatosToRemoveFromBerger);
 }
-//_____________________________________________________________________
+
+//___________________________________________________________________________________________________________________________________________________
+
 const showTotalBtn = document.querySelector('.showTotalBtn');
 const totalContainer = document.getElementById('totalContainer');
 const totalAmountSpan = document.querySelector('.totalAmount');
